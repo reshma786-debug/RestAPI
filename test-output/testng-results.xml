@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-02T16:37:32 IST" name="Default suite" finished-at="2026-09-02T16:37:35 IST" duration-ms="3010">
+  <suite started-at="2026-09-02T18:38:14 IST" name="Default suite" finished-at="2026-09-02T18:38:16 IST" duration-ms="2657">
     <groups>
     </groups>
-    <test started-at="2026-09-02T16:37:32 IST" name="Default test" finished-at="2026-09-02T16:37:35 IST" duration-ms="3010">
-      <class name="projectAPi.TC01_listUsersGETapi">
-        <test-method signature="listUsersGETAPI()[pri:0, instance:projectAPi.TC01_listUsersGETapi@662ac478]" started-at="2026-09-02T16:37:32 IST" name="listUsersGETAPI" finished-at="2026-09-02T16:37:35 IST" duration-ms="2950" status="PASS">
+    <test started-at="2026-09-02T18:38:14 IST" name="Default test" finished-at="2026-09-02T18:38:16 IST" duration-ms="2657">
+      <class name="projectSoap.TC04_SubtractSoapAPI">
+        <test-method signature="subtractSoapAPI()[pri:0, instance:projectSoap.TC04_SubtractSoapAPI@77c2494c]" started-at="2026-09-02T18:38:14 IST" name="subtractSoapAPI" finished-at="2026-09-02T18:38:16 IST" duration-ms="2615" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- listUsersGETAPI -->
-      </class> <!-- projectAPi.TC01_listUsersGETapi -->
+        </test-method> <!-- subtractSoapAPI -->
+      </class> <!-- projectSoap.TC04_SubtractSoapAPI -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

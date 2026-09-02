@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectAPi.TC03_PatchUserapiJSONObject">
+      <class name="projectSoap.TC01_AddSoapApi">
         <methods>
-          <include name="patchAPI"/>
+          <include name="addSoapapi"/>
         </methods>
-      </class> <!-- projectAPi.TC03_PatchUserapiJSONObject -->
+      </class> <!-- projectSoap.TC01_AddSoapApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
