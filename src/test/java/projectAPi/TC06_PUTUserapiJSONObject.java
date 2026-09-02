@@ -7,18 +7,16 @@ import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
 
-public class TC03_CreateUserPOSTapiJSONObject {
+public class TC06_PUTUserapiJSONObject {
 
 	@Test
-	public void createAPI() {
+	public void patchAPI() {
 		
 		Faker faker = new Faker();
 		
 		JSONObject requestBody = new JSONObject();
-		requestBody.put("name",faker.name().toString());
-		requestBody.put("gender",faker.demographic().sex());
+		requestBody.put("name","GOD");
 		requestBody.put("email",faker.internet().emailAddress());
-		requestBody.put("status","active");
 	
 		         given()
 		         .header("Accept", "application/json")
@@ -27,13 +25,14 @@ public class TC03_CreateUserPOSTapiJSONObject {
 
 				 .when()
 				 .body(requestBody.toString())
-				 .post("https://gorest.co.in/public/v2/users")
+				 .patch("https://gorest.co.in/public/v2/users/8600410")
 
 				 .then()
 				 .log().status()
 				 .log().body()
-		         .statusCode(201)
-		         .body("status",equalTo("active"));
+		         .statusCode(200)
+		         .body("status",equalTo("active"))
+		         .body("name", equalTo("GOD"));
 
 	}
 }

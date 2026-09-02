@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectSoap.TC01_AddSoapApi">
+      <class name="projectPojoClass.TC01_PostSerailization">
         <methods>
-          <include name="addSoapapi"/>
+          <include name="postAPI"/>
         </methods>
-      </class> <!-- projectSoap.TC01_AddSoapApi -->
+      </class> <!-- projectPojoClass.TC01_PostSerailization -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
