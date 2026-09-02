@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectAPi.TC05_DeleteUserApi">
+      <class name="projectAPi.TC03_PatchUserapiJSONObject">
         <methods>
-          <include name="deleteAPI"/>
+          <include name="patchAPI"/>
         </methods>
-      </class> <!-- projectAPi.TC05_DeleteUserApi -->
+      </class> <!-- projectAPi.TC03_PatchUserapiJSONObject -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
