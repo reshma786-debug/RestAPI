@@ -3,7 +3,7 @@ import static io.restassured.RestAssured.given;
 import java.io.FileNotFoundException;
 import org.testng.annotations.Test;
 
-public class TC01_listUsersGETapi {
+public class TC06_InteroperabilityTesting {
 
 	@Test
 	public void listUsersGETAPI() throws FileNotFoundException {

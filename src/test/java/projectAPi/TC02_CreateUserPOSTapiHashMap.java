@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
 
+import io.restassured.module.jsv.JsonSchemaValidator;
+
 public class TC02_CreateUserPOSTapiHashMap {
 
 	@Test
@@ -34,6 +36,7 @@ public class TC02_CreateUserPOSTapiHashMap {
 				 .log().status()
 				 .log().body()
 		         .statusCode(201)
+		         .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("./JsonSchemaFormatFile.json"))
 		         .log().headers();
 		         
 	}
