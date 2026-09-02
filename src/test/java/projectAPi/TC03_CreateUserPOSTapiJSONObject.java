@@ -1,18 +1,23 @@
 package projectAPi;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
+
 import org.json.JSONObject;
 import org.testng.annotations.Test;
+
+import com.github.javafaker.Faker;
 
 public class TC03_CreateUserPOSTapiJSONObject {
 
 	@Test
 	public void createAPI() {
-		 
+		
+		Faker faker = new Faker();
+		
 		JSONObject requestBody = new JSONObject();
-		requestBody.put("name","reshma12");
-		requestBody.put("gender","female");
-		requestBody.put("email","reshma2w312@gmail.com");
+		requestBody.put("name",faker.name().toString());
+		requestBody.put("gender",faker.demographic().sex());
+		requestBody.put("email",faker.internet().emailAddress());
 		requestBody.put("status","active");
 	
 		         given()

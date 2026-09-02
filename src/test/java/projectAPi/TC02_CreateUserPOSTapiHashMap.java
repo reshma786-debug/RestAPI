@@ -6,15 +6,19 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 
-public class TC02_CreateUserPOSTapi {
+import com.github.javafaker.Faker;
+
+public class TC02_CreateUserPOSTapiHashMap {
 
 	@Test
 	public void createAPI() {
 		 
+		Faker faker = new Faker();
+		
 		Map<String,String>requestBody = new HashMap<>();
-		requestBody.put("name","reshma123");
-		requestBody.put("gender","female");
-		requestBody.put("email","r12eshma133@gmail.com");
+		requestBody.put("name",faker.name().toString());
+		requestBody.put("gender",faker.demographic().sex());
+		requestBody.put("email",faker.internet().emailAddress());
 		requestBody.put("status","active");
 	
 		         given()
