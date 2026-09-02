@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.api.TC04_CreateUserPOSTapiThroughFile">
+      <class name="projectAPi.TC05_DeleteUserApi">
         <methods>
-          <include name="createAPI"/>
+          <include name="deleteAPI"/>
         </methods>
-      </class> <!-- com.project.api.TC04_CreateUserPOSTapiThroughFile -->
+      </class> <!-- projectAPi.TC05_DeleteUserApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

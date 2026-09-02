@@ -1,4 +1,4 @@
-package com.project.api;
+package projectAPi;
 import static io.restassured.RestAssured.given;
 import java.io.FileNotFoundException;
 import org.testng.annotations.Test;
