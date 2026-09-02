@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-01T23:51:57 IST" name="Default suite" finished-at="2026-09-01T23:52:01 IST" duration-ms="4134">
+  <suite started-at="2026-09-02T12:59:06 IST" name="Default suite" finished-at="2026-09-02T12:59:09 IST" duration-ms="2828">
     <groups>
     </groups>
-    <test started-at="2026-09-01T23:51:57 IST" name="Default test" finished-at="2026-09-01T23:52:01 IST" duration-ms="4134">
-      <class name="com.project.api.TC03_CreateUserPOSTapiJSONObject">
-        <test-method signature="createAPI()[pri:0, instance:com.project.api.TC03_CreateUserPOSTapiJSONObject@557caf28]" started-at="2026-09-01T23:51:57 IST" name="createAPI" finished-at="2026-09-01T23:52:01 IST" duration-ms="4081" status="PASS">
+    <test started-at="2026-09-02T12:59:06 IST" name="Default test" finished-at="2026-09-02T12:59:09 IST" duration-ms="2828">
+      <class name="com.project.api.TC04_CreateUserPOSTapiThroughFile">
+        <test-method signature="createAPI()[pri:0, instance:com.project.api.TC04_CreateUserPOSTapiThroughFile@408d971b]" started-at="2026-09-02T12:59:06 IST" name="createAPI" finished-at="2026-09-02T12:59:09 IST" duration-ms="2789" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAPI -->
-      </class> <!-- com.project.api.TC03_CreateUserPOSTapiJSONObject -->
+      </class> <!-- com.project.api.TC04_CreateUserPOSTapiThroughFile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
