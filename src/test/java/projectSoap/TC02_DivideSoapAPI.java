@@ -16,7 +16,6 @@ public class TC02_DivideSoapAPI {
 	@Test
 	public void divideSoapAPI() throws IOException
 	{
-		
 		File file = new File("C:\\Users\\Reshma\\eclipse-workspace\\RestAPIAutomation\\src\\main\\resources\\divideSoapApi.xml");
 		FileInputStream input = new FileInputStream(file);
 		String requestBody = IOUtils.toString(input,"UTF-8");
@@ -24,9 +23,9 @@ public class TC02_DivideSoapAPI {
 		given()
 		.header("Content-Type","text/xml; charset=utf-8")		
 		.header("SOAPAction", "http://tempuri.org/Divide")
+		.body(requestBody)
 		
 		.when()
-		.body(requestBody)
 		.post("http://www.dneonline.com/calculator.asmx")
 		
 		.then()

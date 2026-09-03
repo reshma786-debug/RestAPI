@@ -22,12 +22,14 @@ public class TC01_AddSoapAPI {
 		String requestBody = IOUtils.toString(input,"UTF-8");
 		
 		given()
+		.baseUri("http://www.dneonline.com")
 		.header("Content-Type","text/xml; charset=utf-8")		
 		.header("SOAPAction", "http://tempuri.org/Add")
+		.body(requestBody)
+		.queryParam("op", "Add")
 		
 		.when()
-		.body(requestBody)
-		.post("http://www.dneonline.com/calculator.asmx")
+		.post("/calculator.asmx")
 		
 		.then()
 		.log().body()

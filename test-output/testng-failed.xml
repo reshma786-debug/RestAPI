@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectPojoClass.TC01_PostSerailization">
+      <class name="projectPojoClass.TC04_ExpiredToken">
         <methods>
-          <include name="postAPI"/>
+          <include name="getAPI"/>
         </methods>
-      </class> <!-- projectPojoClass.TC01_PostSerailization -->
+      </class> <!-- projectPojoClass.TC04_ExpiredToken -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

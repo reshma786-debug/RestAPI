@@ -1,4 +1,4 @@
-package projectAPi;
+package projectAPI;
 import static io.restassured.RestAssured.given;
 
 import java.io.File;
@@ -16,16 +16,16 @@ public class TC04_CreateUserPOSTapiExternalJsonFile {
 		 
 		File file = new File("C:\\Users\\Reshma\\eclipse-workspace\\RestAPIAutomation\\src\\main\\resources\\JsonFile");
 	    FileReader read = new FileReader(file);
-	    JSONTokener tokener = new JSONTokener(read);
-	    JSONObject requestBody = new JSONObject(tokener);
+	    JSONTokener tokener = new JSONTokener(read); //is used to read/parse JSON data, especially when you have JSON in the form of a String, file, or input stream {data from a source, byte by byte}
+	    JSONObject requestBody = new JSONObject(tokener); //is a Java object used to represent JSON data as key-value pairs
 	    
 		         given()
 		         .header("Accept", "application/json")
 		         .header("Content-Type", "application/json")
-				 .header("Authorization", "Bearer 54878a8aad0e9863c1f22d40cec9129ed96d83354df2c2d4e38e43271baf3b14") 
-
-				 .when()
+				 .header("Authorization", "Bearer ef14fbe1484c31a9807a8d9b4932e1bf8f0eaade412275313cfc363546d38333") 
 				 .body(requestBody.toString())
+				 
+				 .when()
 				 .post("https://gorest.co.in/public/v2/users")
 
 				 .then()
@@ -33,6 +33,5 @@ public class TC04_CreateUserPOSTapiExternalJsonFile {
 				 .log().body()
 		         .statusCode(201);
 		         
-
 	}
 }
