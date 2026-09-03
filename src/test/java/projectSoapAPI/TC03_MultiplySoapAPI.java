@@ -1,4 +1,4 @@
-package projectSoap;
+package projectSoapAPI;
 
 import static io.restassured.RestAssured.given;
 
@@ -8,28 +8,26 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 import org.apache.commons.io.IOUtils;
 
-public class TC01_AddSoapAPI {
+public class TC03_MultiplySoapAPI {
 	
 	//http://www.dneonline.com/calculator.asmx
-	//http://www.dneonline.com/calculator.asmx?op=Add
+	//http://www.dneonline.com/calculator.asmx?op=Multiply
 	
 	@Test
-	public void addSoapAPI() throws IOException
+	public void mutliplySoapAPI() throws IOException
 	{
 		
-		File file = new File("C:\\Users\\Reshma\\eclipse-workspace\\RestAPIAutomation\\src\\main\\resources\\addSoapApi.xml");
+		File file = new File("C:\\Users\\Reshma\\eclipse-workspace\\RestAPIAutomation\\src\\main\\resources\\multiplySoapApi.xml");
 		FileInputStream input = new FileInputStream(file);
 		String requestBody = IOUtils.toString(input,"UTF-8");
 		
 		given()
-		.baseUri("http://www.dneonline.com")
 		.header("Content-Type","text/xml; charset=utf-8")		
-		.header("SOAPAction", "http://tempuri.org/Add")
-		.body(requestBody)
-		.queryParam("op", "Add")
+		.header("SOAPAction", "http://tempuri.org/Multiply")
 		
 		.when()
-		.post("/calculator.asmx")
+		.body(requestBody)
+		.post("http://www.dneonline.com/calculator.asmx")
 		
 		.then()
 		.log().body()
